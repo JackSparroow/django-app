@@ -217,21 +217,21 @@ function createTable(data) {
     $("tbody").children().remove()
     //document.getElementById('tbody').remo
 
-    total_cases = data[0]['total_cases']
-    total_deaths = data[0]['total_death']
-    total_recovered  = data[0]['total_recovered']
+    total_cases = data[7]['total_cases']
+    total_deaths = data[7]['total_death']
+    total_recovered  = data[7]['total_recovered']
 
-    new_cases = data[0]['new_cases']
-    new_deaths = data[0]['new_deaths']
-    active_cases = data[0]['active_cases']
+    new_cases = data[7]['new_cases']
+    new_deaths = data[7]['new_deaths']
+    active_cases = data[7]['active_cases']
 
     document.getElementById('cases').innerText = total_cases
     document.getElementById('deaths').innerText=total_deaths
     document.getElementById('recovered').innerText=total_recovered
 
-    document.getElementById('newcases').innerText = total_cases
-    document.getElementById('newdeaths').innerText=total_deaths
-    document.getElementById('active_cases').innerText=total_recovered
+    document.getElementById('newcases').innerText = new_cases
+    document.getElementById('newdeaths').innerText=new_deaths
+    document.getElementById('active_cases').innerText=active_cases
 
 
     for (var i = 0; i <data.length; i++) {
